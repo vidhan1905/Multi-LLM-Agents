@@ -7,7 +7,7 @@ from core.llm_manager import LLMManager
 class PandasAgent:
     """Agent that can interact with one or more Pandas DataFrames."""
     
-    def __init__(self, llm_manager: LLMManager, csv_dir: str = "data"):
+    def __init__(self, llm_manager: LLMManager, csv_dir: str = "csv_data"):
         """
         Initializes the PandasAgent.
         
