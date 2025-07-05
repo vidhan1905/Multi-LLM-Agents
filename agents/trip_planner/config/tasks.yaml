@@ -1,0 +1,140 @@
+budget_analysis:
+  description: >
+    Analyze the travel budget and requirements for: {travel_request}
+
+    Your tasks:
+    1. Break down the budget into categories (flights, accommodation, food, activities, misc)
+    2. Research average costs for the destination and travel style
+    3. Suggest budget optimization strategies
+    4. Identify potential hidden costs
+    5. Recommend budget allocation percentages
+
+    Provide a detailed budget analysis report.
+  expected_output: >
+    Detailed budget breakdown with recommendations and cost-saving tips
+  agent: budget_analyzer       
+  Markdown: True 
+
+destination_research:
+  description: >
+    Research and recommend destinations based on: {travel_request}
+
+    Your tasks:
+    1. Analyze travel preferences, budget, and date constraints
+    2. Research suitable destinations considering weather, events, and costs
+    3. Check weather forecast for the destination during the travel period (from departure to return date)
+    4. Evaluate safety and health considerations
+    5. Provide 3-5 destination recommendations with pros/cons
+
+    Include seasonal considerations and unique experiences available.
+  expected_output: >
+    Comprehensive destination analysis with top recommendations and travel considerations
+  agent: destination_researcher 
+  Markdown: True 
+
+itinerary_planning:
+  description: >
+    Create a detailed itinerary for: {travel_request}
+
+    Your tasks:
+    1. Plan day-by-day activities based on destination research
+    2. Include travel time on Day 1 and the final day within the duration_days
+    3. Consider travel time between locations
+    4. Include must-see attractions and hidden gems
+    5. Balance structured activities with free time
+    6. Account for rest days and flexibility
+    7. Include estimated time and costs for each activity
+
+    Treat departure and return dates as part of the full trip experience.
+    On travel days, recommend lighter activities or check-in/check-out logistics.
+  expected_output: >
+    Detailed day-by-day itinerary with travel included and activities, timings, and logistics
+  agent: itinerary_planner
+  Markdown: True
+
+
+accommodation:
+  description: >
+    Find accommodation options for: {travel_request}
+
+    Your tasks:
+    1. Research accommodation types suitable for the travel style and budget
+    2. Find specific recommendations in optimal locations
+    3. Compare prices across different platforms
+    4. Check reviews and ratings
+    5. Consider amenities and proximity to planned activities
+    6. Provide backup options
+
+    Include booking tips and best times to book for deals.
+  expected_output: >
+    Curated list of accommodation options with booking recommendations
+  agent: accommodation_specialist
+  Markdown: True 
+
+travel_coordination:
+  description: >
+    Coordinate all travel logistics for: {travel_request}
+
+    Your tasks:
+    1. Research flight options and find best deals
+    2. Plan local transportation (airports, between cities, daily transport)
+    4. Recommend travel insurance options
+    5. Create a pre-travel checklist
+    6. Suggest packing recommendations
+
+    Ensure all logistics are covered for a smooth travel experience.
+  expected_output: >
+    Complete travel logistics plan with bookings guide and checklists
+  agent: travel_coordinator      
+  Markdown: True 
+
+visa_advice:
+  description: >
+    Advise on visa requirements and application process for: {travel_request}
+
+    Your tasks:
+    1. Identify visa requirements for the traveler's nationality and destination
+    2. Outline the application process, required documents, and timelines
+    3. Highlight any special considerations (e.g., transit visas, e-visas, visa on arrival)
+    4. Provide links to official resources or application portals
+    5. Suggest tips for a successful application
+
+    Provide a clear, step-by-step visa guidance report.
+  expected_output: >
+    Step-by-step visa requirements and application guide
+  agent: visa_advisor
+  Markdown: True
+
+local_experiences:
+  description: >
+    Recommend authentic local experiences for: {travel_request}
+
+    Your tasks:
+    1. Suggest unique local attractions, restaurants, and activities
+    2. Highlight hidden gems and off-the-beaten-path experiences
+    3. Consider the traveler's interests and preferences
+    4. Provide practical tips for enjoying local culture
+    5. Include estimated costs and reservation advice if needed
+
+    Provide a curated list of local experiences and recommendations.
+  expected_output: >
+    Curated list of local experiences, restaurants, and tips
+  agent: local_guide
+  Markdown: True
+
+event_finding:
+  description: >
+    Find local events and festivals for: {travel_request}
+
+    Your tasks:
+    1. Research events, festivals, and activities happening during the travel period
+    2. Match events to the traveler's interests and location
+    3. Provide event details, dates, and ticketing information
+    4. Suggest how to incorporate events into the itinerary
+    5. Highlight any must-see or unique local happenings
+
+    Provide a list of relevant events and how to attend them.
+  expected_output: >
+    List of events, festivals, and activities with details and recommendations
+  agent: event_finder
+  Markdown: True
